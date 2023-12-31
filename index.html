@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          .hidden {
+            display: none;
+          }
+        </style>
+        <title>BigPipe Simulation</title>
+
+
+
+    </head>
+    <body>
+        
+  <div id="div1" class="hidden">
+
+    <h2 class="title1">Login</h2>
+    <form>
+        <label>
+            <input type="text" placeholder="Email">
+            <br>
+            <br>
+            <br>
+            <input type="password" placeholder="Password">
+        </label>
+    </form>
+    <a href="#"><p class="p1">FORGOT YOUR PASSWORD?</p></a> 
+    <a href="#"><button class="b1">REGISTER</button></a>
+    <button class="b2">SING IN</button>
+
+  </div>
+
+
+
+  <div id="div2" class="hidden">
+
+    <h2 class="title1">BASIC PLAN</h2>
+    <div class="divA">
+        <span><strong>$9</strong></span>
+        <p>/MONTH</p>
+</div>
+<ul class="list1">
+    <li>1gp disk space</li>
+    <br>
+    <li>100 email account</li>
+    <br>
+    <li>24/24 support</li>
+</ul>
+<button class="btn1">purchase now</button>
+
+  </div>
+  <div id="div3" class="hidden">
+
+        <div class="team1_img">
+            <img src="Images/WhatsApp Image 2023-06-14 at 3.26.46 PM.jpeg" alt="" class="team1_img1">
+            <div class="teamoverlay34">
+                <div class="team1-icons">
+                    <a class="team1-a1" href="#"><i class="fab fa-facebook"></i></a>
+                    <a class="team1-a2" href="#"><i class="fab fa-twitter"></i></a>     
+                    <a class="team1-a3" href="#"><i class="fab fa-linkedin"></i></a>     
+                </div> <!-- team1-icons-->
+             </div> <!-- teamoverlat34 -->
+        </div> <!-- team1-img -->
+        
+        <div class="team1_name"><p class="team1_text">Ali Raed</p></div>
+        <div class="team1_description"><p class="description_text">Web Developer</p></div>                
+
+
+  </div>
+  <div id="div4" class="hidden">
+
+        <img src="Images/OIP (2).jpg" alt="" class="img1" width="100%" height="250px">
+        <div class="cat2-h2-1 A"><h2>8Y installment</h2></div>
+        <div class="cat2-h2-2 B"><h2>Buy now ur dream car</h2></div>
+
+
+  </div>
+
+  <div id="div5" class="hidden">
+
+        <div class="cat1-div2-img"><img src="Images/OIP (1).jpg" alt="No Photo" width="250px" height="250px"></div>
+        <div class="cat1-h2-1"><h2>Most Seller</h2></div>
+        <div class="cat1-div2-h2-2"><h2>BMW 340 i</h2></div>
+        <div class="arrow"><i class="fas fa-caret-square-right"></i></div>
+
+  </div>
+
+  <script>
+    // Simulate asynchronous rendering
+    function simulateRendering(divId, delay) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          document.getElementById(divId).classList.remove('hidden');
+          resolve();
+        }, delay);
+      });
+    }
+
+    // Render divs sequentially
+    async function renderDivs() {
+      await simulateRendering('div1', 2000);
+      await simulateRendering('div2', 1000);
+      await simulateRendering('div4', 2000);
+      await simulateRendering('div3', 1000);
+      await simulateRendering('div5', 1000);
+    }
+
+    // Trigger the rendering process
+    renderDivs();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="js/cdnjs.cloudflare.com_ajax_libs_popper.js_1.11.0_umd_popper.min.js"></script>
+        <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>
